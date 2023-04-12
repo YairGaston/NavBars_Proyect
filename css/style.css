@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+*{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+:root {
+    --black: black;
+    --white: white; 
+}
+footer{
+    animation-name: de-arriba-a-abajo;
+    animation-duration: 2000ms;
+    padding-top: 300px;
+    text-align: center;
+}
+header{
+
+    color:  var(--white) ;
+    display: flex;
+    flex-direction: row;
+    align-items: center ;
+    justify-content: center;
+    background-color: rgb(29, 22, 22);
+    border-radius: 10px;
+}
+body{
+    background-color: var(--white);
+}
+a{
+    font-style: bold;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+b{
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center ;
+    justify-content: center;
+    
+}
+/* esto es para referenciar una transformación */
+/* empieza en 0% es decir a la izquierda */
+@keyframes de-izquierda-a-derecha{
+0%{
+    transform: translateX(-800px);
+    opacity: 0;
+}
+/* termina en el 100% de la ubicación donde debe ir */
+100%{
+    transform: translateX(0px);
+    /* opacidad para la transición  */
+    opacity: 1;
+}
+}
+@keyframes de-arriba-a-abajo{
+    0%{
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+    /* termina en el 100% de la ubicación donde debe ir */
+    100%{
+        transform: translateY(0px);
+        /* opacidad para la transición  */
+        opacity: 1;
+    }
+    }
+/* dentro de la caja se referencia a la keyframe y se le da la duración */
+.caja{
+    align-items: center ;
+    justify-content: center;
+    animation-name: de-izquierda-a-derecha;
+    animation-duration: 2000ms;
+    color: black;
+    color: var(--black) ;
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    height: 65px;
+    background-color: white;
+    border-radius: 10px;
+    border-width: 0px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 30px;
+    box-shadow: 2.5px 2px 8px 4px rgb(207, 200, 200);
+    
+} 
+.caja:hover{
+    transform: rotate(-1deg);
+    /* transform: scale(1.05); */
+    transition: 0.5s ease-in-out;
+    background-color: rgb(29, 134, 124);
+    /* opacity: 0.5; */
+    filter: blur(00.5s);
+}
+.caja2{
+    align-items: center ;
+    justify-content: center;
+    animation-name: de-izquierda-a-derecha;
+    animation-duration: 2000ms;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    height: 65px;
+    background-color: rgb(44, 40, 40);
+    border-radius: 10px;
+    border-width: 0px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 30px;
+    box-shadow: 2.5px 2px 8px 4px rgb(207, 200, 200);
+}
+.caja2:hover{
+    transition: 0.5s ease-in-out;
+    background-color: rgb(29, 134, 124);
+}
+h1{
+    animation-name: de-arriba-a-abajo;
+    animation-duration: 2000ms;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+}
